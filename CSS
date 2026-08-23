@@ -1,59 +1,102 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <title>startintech</title>
-</head>
-<body>
-    <header>
-    <div class="interface">
-        <div class="logo">
-            <a href="#">
-                <img src="imagem/logo.png" alt="logo">
-            </a>
-        </div>
-                  <nav class="navegação">
-                <ul>
-                    <li><a href="#"><h3>inicio</h3></a></li>
-                    <li><a href="#"><h3>aulas</h3></a></li>
-                    <li><a href="#"><h3>meu progresso</h3></a></li>
-                </ul>
-            </nav>
-           <!-- Dentro do seu header > .interface, agrupe os botões assim: -->
- <div class="btn-entrar">
-                <a href="#"><button>entrar</button>
-                </a>
-            </div>
-            <div class="btn-cadastro">
-                <a href="#"><button>cadastrar</button>
-                </a>
-            </div>
-</div>
-    </div>
-</header>
-<main>
-    <section class="topo">
-         <div class="interface">
-              <div class="flex">
-                <div class="txt-topo">
-                    <h1>Aprender nunca foi <span>tão simples</span></h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore sapiente at saepe eveniet omnis voluptatum, temporibus perspiciatis in quis deserunt impedit quo pariatur adipisci placeat aliquid veritatis tenetur dicta repudiandae?</p>
-                <img src="" alt="imagem aleatoria">
-                    <div class="button-aulas">
-                    <button class="aulas">ver todas aulas</button>
-                    <button type="button" class="btn btn-light">Como Funciona</button>
-                    </div>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+}
 
-    </section>
-    <div class="barra">
-        <h3>manoel</h3>
-        <h3>biel</h3>
-        <h3>isaq</h3>
-    </div>
+body{
+    background-color: white;
+}
 
-</main>
-</body>
-</html>
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+header{
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*alinha tudo deixando o  ultimo na ponta direita eo primeiro na esquerda */
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    transition: 100ms;
+}
+
+/*da a animação de aumentar quando passa o mause por cima*/
+header a:hover{
+    color: black;
+    transform: scale(1.2);
+
+}
+
+/*tira os pontinhos*/
+header nav ul{
+    list-style: none;
+}
+
+/*deixa o inicio,aulas,meu pg em linha e separa eles */
+header nav ul li{
+    display: inline-block;
+    padding: 0px 60px;
+}
+
+.btn-entrar button{
+    padding: 10px 50px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: rgba(2, 194, 66, 0.867);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-cadastro button{
+    padding: 10px 50px;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: rgba(2, 194, 66, 0.867);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+h2.titulo{
+    color: #fff;
+    font-size: 3px;
+    text-align: center;
+}
+
+.materias{
+    display: flex;
+    gap: 200px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+.card2,.card3{
+    width: 350px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 200px;
+    display: block;
+}
