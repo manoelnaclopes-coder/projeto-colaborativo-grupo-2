@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: grey;
 }
+    
 
 body{
     background-color: white;
@@ -55,7 +56,7 @@ header nav ul li{
 
 .btn-entrar button{
     padding: 10px 50px;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 600;
     background-color: rgba(2, 194, 66, 0.867);
     border: 0;
@@ -66,7 +67,7 @@ header nav ul li{
 
 .btn-cadastro button{
     padding: 10px 50px;
-    font-size: 13px;
+    font-size: 20px;
     font-weight: 600;
     background-color: rgba(2, 194, 66, 0.867);
     border: 0;
@@ -83,20 +84,29 @@ h2.titulo{
 
 .materias{
     display: flex;
-    gap: 200px;
+    gap: 20px;
     flex-wrap: wrap;
     margin: 20px auto;
+    border: 0;
+    border-radius: 30px;
+    transition: .2s;
+    margin-left: 300px;
 }
 
 .card2,.card3{
-    width: 350px;
+    width: 500px;
     border: 2px solid #ccc;
-    border-radius: 5px;
+    border-radius: 30px;
     overflow: hidden;
+    transition: .2s;
 }
 
-.card-img-top{
+.card-img-top,.card-img-top2,.card-img-top3{
     width: 100%;
     height: 200px;
     display: block;
+    border: 0;
+    border-radius: 30px;
+    transition: .2s;
 }
+
