@@ -1,112 +1,110 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: grey;
-}
-    
-
 body{
-    background-color: white;
+    border: 0;
+    padding: 0;
+    margin: 0;
 }
 
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.flex{
+/* alinhar header e animar */
+ header .interface{
     display: flex;
-}
-
-header{
-    padding: 40px 4%;
-}
-
-header > .interface{
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /*alinha tudo deixando o  ultimo na ponta direita eo primeiro na esquerda */
+    width: 100%;
+    box-sizing: border-box;
+ }
+
+ header ul{
+    display: flex;     /* aqui ele deixou as letras alinhadas*/
+    list-style: none;    /* tirou todas bolinhas das letras*/
+    gap: 100px;        /* deu um espaço entre as letras*/
 }
 
 header a{
-    color: black;
-    text-decoration: none;
-    display: inline-block;
-    transition: 100ms;
+    text-decoration: none; /* aqui tira a linha de baixo */
+    color: rgb(74, 71, 71);
+    transition: .43s;
 }
-
-/*da a animação de aumentar quando passa o mause por cima*/
-header a:hover{
-    color: black;
-    transform: scale(1.2);
-
-}
-
-/*tira os pontinhos*/
-header nav ul{
-    list-style: none;
-}
-
-/*deixa o inicio,aulas,meu pg em linha e separa eles */
-header nav ul li{
-    display: inline-block;
-    padding: 0px 60px;
-}
-
-.btn-entrar button{
-    padding: 10px 50px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(2, 194, 66, 0.867);
-    border: 0;
+header .navegacao a:hover{ /* aqui seleciona em especifico o navegacao a*/
+    background-color: rgba(0, 0, 0, 0.129);
     border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
+    padding: 5px 10px;
 }
 
-.btn-cadastro button{
-    padding: 10px 50px;
-    font-size: 20px;
-    font-weight: 600;
-    background-color: rgba(2, 194, 66, 0.867);
-    border: 0;
+header .botoes{ /* aqui estou selecionando botoes dentro do header*/
+    display: flex;  /* alinhou os botoes*/
+    align-items: center;
+    gap: 10px;  /* deu um espaçamento entre os botoes*/
+}
+
+/*estilizar os botoes de cadastrar e entrar*/
+ .btn-cadastro button{
+    background-color: green;
     border-radius: 30px;
+    padding: 5px 20px;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;     
+}
+
+.btn-cadastro{
+    transition: .3s;
+    
+}
+
+.btn-cadastro:hover{ /*hover estiliza o botaõ quendo vc passa em cima*/
+    transform: scale(1.1);
+    
+}
+
+ .btn-entrar button{
+    border: transparent;
+    padding: 5px 20px;
     cursor: pointer;
-    transition: .2s;
+ }
+
+ .btn-entrar{
+    transition: .5s;
+ }
+
+ .btn-entrar:hover{ /*hover estiliza o botaõ quendo vc passa em cima*/
+    transform: scale(1.1);
 }
 
-h2.titulo{
-    color: #fff;
-    font-size: 3px;
-    text-align: center;
+/*barra que separa o header*/
+header{
+    box-shadow: 0 2px rgba(0, 0, 0, 0.162); /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
 }
 
-.materias{
+/* arrumar a barra de pesquisa */
+.pesquisa{
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin: 20px auto;
-    border: 0;
-    border-radius: 30px;
-    transition: .2s;
-    margin-left: 300px;
+    background-color: #77777727;
+    border-radius: 20px;
+    align-items: center;
+    width: 300px;
+    border-bottom: 1px solid #2d1de0;
+    padding: 5px 15px;
+    width: 230px;
+}
+/*aqui vai mudar onde o usuario escreve*/
+.pesquisa input{
+    border: none; /*tira a borda preta*/
+    background: transparent; /*usa o fundo cinza que ja tem*/
+    outline: none; /*tirou as linhas em volta da escrita*/
+    width: 100%; /*vai o culpar o espaço maximo*/
+    font-size: 14px;
+    color: #333;
+}
+/*placeholder é para autera cor, fonte ou opacidade*/
+.pesquisa input::placeholder{
+    color: #757f89;
 }
 
-.card2,.card3{
-    width: 500px;
-    border: 2px solid #ccc;
-    border-radius: 30px;
-    overflow: hidden;
-    transition: .2s;
+.pesquisa span{
+    font-size: 20px;
+    color: #777;
+    font-weight: bold; /*bold significa 700 deixa o span mais grosso*/
+    cursor: pointer;
+    margin-left: 5px;
 }
-
-.card-img-top,.card-img-top2,.card-img-top3{
-    width: 100%;
-    height: 200px;
-    display: block;
-    border: 0;
-    border-radius: 30px;
-    transition: .2s;
-}
-
