@@ -1,0 +1,67 @@
+create table aluno(
+	id_aluno int auto_increment primary key,
+    nome varchar(100) not null,
+    senha varchar (100) not null,
+    email varchar(100) not null,
+    telefone varchar(13) not null,
+    cpf varchar(14) not null
+);
+
+-- tabela principal aonde o aluno vai cadastrar ou entrar
+
+create table planos(
+	id_plano int auto_increment primary key,
+    plano varchar (20) not null,
+    descricao_planos varchar (500) not null,
+    preco decimal (10,2) not null,
+    id_aluno int,
+    foreign key (id_aluno) references aluno(id_aluno)
+);
+
+-- planos tem uma chave estrangeira que estar pegando o os dados da tabela alunos 
+
+create table materias(
+	id_materias int auto_increment primary key,
+    nome_materias varchar (50) not null,
+    descricao_materias varchar(500) not null,
+    nivel varchar (100) not null
+);
+
+-- materias que vão estar no curso 
+
+create table aula(
+	id_aula int auto_increment primary key,
+    nome_aula varchar (150) not null,
+    descricao_aula varchar (500) not null,
+    id_materias int,
+    foreign key (id_materias) references materias(id_materias)
+);
+
+-- aqui vai mostrar nome, descrição das aulas que tambem tem uma chave estrangeira que ta pegando de materias 
+
+create table progresso(
+	id_progresso int auto_increment primary key,
+    porcentagem int (100) not null,
+    total_de_perguntas int (10) not null,
+    id_aluno int,
+    id_aula int,
+    foreign key(id_aluno) references aluno(id_aluno),
+    foreign key(id_aula) references aula(id_aula)
+);
+
+-- o sistema de progresso do curso
+
+create table exercicio(
+	id_exercicio int auto_increment primary key,
+    pergunta varchar (500) not null,
+    id_aula int,
+    foreign key (id_aula) references aula(id_aula)
+    );
+    
+create table aluno_materia(
+    id_aluno int not null,
+    id_materias int not null,
+    foreign key (id_aluno) references aluno(id_aluno),
+    foreign key (id_materias) references materias(id_materias),
+	primary key (id_aluno,id_materias)
+);
