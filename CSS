@@ -1,11 +1,11 @@
-body{
+body {
     border: 0;
     padding: 0;
     margin: 0;
 }
 
 /*logo*/
-.logo img{
+.logo img {
     border: 0;
     border-radius: 20px;
     margin-left: 50px;
@@ -14,7 +14,7 @@ body{
 /* alinhar header e animar */
 
 
-header .interface{
+header .interface {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,71 +23,84 @@ header .interface{
     height: 80px;
 }
 
-header ul{
-    display: flex;     /* aqui ele deixou as letras alinhadas*/
-    list-style: none;    /* tirou todas bolinhas das letras*/
-    gap: 100px;        /* deu um espaço entre as letras*/
+header ul {
+    display: flex;
+    /* aqui ele deixou as letras alinhadas*/
+    list-style: none;
+    /* tirou todas bolinhas das letras*/
+    gap: 100px;
+    /* deu um espaço entre as letras*/
+    font-size: 19px;
 }
 
-header a{
-    text-decoration: none; /* aqui tira a linha de baixo */
+header a {
+    text-decoration: none;
+    /* aqui tira a linha de baixo */
     color: rgb(74, 71, 71);
     transition: .43s;
 }
-header .navegacao a:hover{ /* aqui seleciona em especifico o navegacao a*/
+
+header .navegacao a:hover {
+    /* aqui seleciona em especifico o navegacao a*/
     background-color: rgba(0, 0, 0, 0.129);
     border-radius: 30px;
     padding: 5px 10px;
 }
 
-header .botoes{ /* aqui estou selecionando botoes dentro do header*/
-    display: flex;  /* alinhou os botoes*/
+header .botoes {
+    /* aqui estou selecionando botoes dentro do header*/
+    display: flex;
+    /* alinhou os botoes*/
     align-items: center;
-    gap: 10px;  /* deu um espaçamento entre os botoes*/
+    gap: 10px;
+    /* deu um espaçamento entre os botoes*/
 }
 
 /*estilizar os botoes de cadastrar e entrar*/
-.btn-cadastro button{
+.btn-cadastro button {
     background-color: rgb(0, 199, 0);
     border-radius: 30px;
     padding: 5px 20px;
     border: 0;
     font-size: 18px;
     font-weight: 600;
-    cursor: pointer;     
+    cursor: pointer;
 }
 
-.btn-cadastro{
+.btn-cadastro {
     transition: .3s;
-    
+
 }
 
-.btn-cadastro:hover{ /*hover estiliza o botaõ quendo vc passa em cima*/
+.btn-cadastro:hover {
+    /*hover estiliza o botaõ quendo vc passa em cima*/
     transform: scale(1.1);
-    
+
 }
 
-.btn-entrar button{
+.btn-entrar button {
     border: transparent;
     padding: 5px 20px;
     cursor: pointer;
 }
 
-.btn-entrar{
+.btn-entrar {
     transition: .5s;
 }
 
-.btn-entrar:hover{ /*hover estiliza o botaõ quendo vc passa em cima*/
+.btn-entrar:hover {
+    /*hover estiliza o botaõ quendo vc passa em cima*/
     transform: scale(1.1);
 }
 
 /*barra que separa o header*/
-header{
-    box-shadow: 0 2px rgba(0, 0, 0, 0.162); /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
+header {
+    box-shadow: 0 2px rgba(0, 0, 0, 0.162);
+    /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
 }
 
 /* arrumar a barra de pesquisa */
-.pesquisa{
+.pesquisa {
     display: flex;
     background-color: #77777727;
     border-radius: 20px;
@@ -97,39 +110,103 @@ header{
     padding: 5px 15px;
     width: 230px;
 }
+
 /*aqui vai mudar onde o usuario escreve*/
-.pesquisa input{
-    border: none; /*tira a borda preta*/
-    background: transparent; /*usa o fundo cinza que ja tem*/
-    outline: none; /*tirou as linhas em volta da escrita*/
-    width: 100%; /*vai o culpar o espaço maximo*/
+.pesquisa input {
+    border: none;
+    /*tira a borda preta*/
+    background: transparent;
+    /*usa o fundo cinza que ja tem*/
+    outline: none;
+    /*tirou as linhas em volta da escrita*/
+    width: 100%;
+    /*vai o culpar o espaço maximo*/
     font-size: 14px;
     color: #333;
 }
+
 /*placeholder é para autera cor, fonte ou opacidade*/
-.pesquisa input::placeholder{
+.pesquisa input::placeholder {
     color: #757f89;
 }
 
-.pesquisa span{
+.pesquisa span {
     font-size: 20px;
     color: #777;
-    font-weight: bold; /*bold significa 700 deixa o span mais grosso*/
+    font-weight: bold;
+    /*bold significa 700 deixa o span mais grosso*/
     cursor: pointer;
     margin-left: 5px;
 }
 
 /*alinhar o texto do topo */
-main .topo{
+main .topo {
     padding-left: 100px;
 
 }
 
-main .txt-topo p{
-    display: block;
-    width: 400px;
+main .txt-topo h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 48px;
+    color: #2d3748;
+    font-weight: 700;
+    /*deixa o texto em negrito*/
+    line-height: 1.2;
+    /*diminui o espaço entre as linhas */
+    margin-bottom: 20px;
+    /*aqui ele afasta o paragrafo de baixo*/
+    font-style: italic;
 }
 
-main .txt-topo h1{
-    font-family: arial, sans-serif;
+.quebrar-linha{
+    display: block;
+}
+
+.quebrar-linha span{
+    color: green;
+    font-style: italic;
+}
+
+main .txt-topo p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #1a1c1e;
+    line-height: 1.4;
+    /*da espaço entre as linhas*/
+    max-width: 450px;
+    /* limita o texto ficar muito comprido*/
+    margin-bottom: 30px;
+    /*afasta o botão de baixo*/
+}
+
+/*imagen do lado do textinho*/
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-direita img{
+    max-width:100%;
+    height: auto;
+    border-radius: 16px;
+    
+}
+
+.img-direita{
+    margin-right: 60px;
+}
+
+/*botão esplicando como funciona o site*/
+.bt-sobre button{
+    color: rgb(0, 0, 0);
+    background-color:none;
+    border-radius: 10px;
+    height: 40px;
+    width: 180px;
+}
+
+.bt-sobre span{
+    font-size: 20px;
 }
