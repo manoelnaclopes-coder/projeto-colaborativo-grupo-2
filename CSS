@@ -214,3 +214,41 @@ section {
     margin-left: 100px;
     margin-top: 10px;
 }
+/*Parte dos Materiais*/
+/* Container pai de todos os cards */
+.materias {
+    padding: 20px 10px;
+    margin-left: 100px; /* Alinha com o resto do seu layout */
+}
+
+/* Agrupa os cards lado a lado usando Flexbox */
+.materias .card {
+    display: flex;
+    flex-direction: row;      /* Se não couber na tela, pula pra linha de baixo */
+    gap: 30px;             /* Espaço de 30px entre cada card */
+    background: transparent; /* Remove o fundo branco padrão do Bootstrap se estiver atrapalhando */
+    border: none;          /* Remove borda do container pai */ 
+}
+
+/* Estilo individual para cada card (card1 e card2) */
+.card1, .card2 {
+    width: 300px;          /* Define uma largura fixa ideal para o card */
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Deixa o card elevado e bonito */
+    overflow: hidden;      /* Garante que a imagem respeite as bordas arredondadas */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajusta as imagens dentro dos cards para não vazarem */
+.card-img-top2 {
+    width: 100%;
+    height: 180px;         /* Define uma altura fixa padrão para as fotos */
+    object-fit: cover;     /* Corta a imagem com qualidade sem distorcer */
+}
+
+/* Ajusta o espaçamento interno do texto dos cards */
+.card-body {
+    padding: 15px;
+}
