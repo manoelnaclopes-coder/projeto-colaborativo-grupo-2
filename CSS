@@ -2,7 +2,7 @@ body {
     border: 0;
     padding: 0;
     margin: 0;
-    background-color: #eef5ff !important; /*o inportante serve para dizer que essa cor é prioridade pois o botstrap tem sua cor definida*/
+    background-color: #a6bcdb !important; /*o inportante serve para dizer que essa cor é prioridade pois o botstrap tem sua cor definida*/
 }
 
 /*logo*/
@@ -111,6 +111,7 @@ header {
     width: 300px;
     padding: 5px 15px;
     width: 230px;
+    border: #030303;
 }
 
 /*aqui vai mudar onde o usuario escreve*/
@@ -120,12 +121,12 @@ header {
     outline: none;   /*tirou as linhas em volta da escrita*/
     width: 100%;   /*vai o culpar o espaço maximo*/
     font-size: 14px;
-    color: #333333;
+    color: #1a1717;
 }
 
 /*placeholder é para autera cor, fonte ou opacidade*/
 .pesquisa input::placeholder {
-    color: #757f89;
+    color: #46494c;
 }
 
 .pesquisa span {
@@ -206,7 +207,7 @@ main .txt-topo p {
 }
 /*aqui cria uma barra verde */
 section {
-    box-shadow: 1px  80px  rgba(59, 141, 21, 0.756);
+    box-shadow: 1px  80px  rgba(59, 141, 21, 0.773);
 }
 /*informaçoes dentro da barra*/
 .barra{
