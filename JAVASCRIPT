@@ -19,6 +19,11 @@ login.addEventListener("click", function(){
     modal.style.display = "flex"
 })
 
+const funciona = document.querySelector(".bt-sobre");
+funciona.addEventListener("click", function(){
+    window.location.href = "funcionamento.html"
+})
+
 const modal = document.querySelector(".modal-login");
 
 const fechar = document.querySelector(".fechar");
