@@ -1,6 +1,6 @@
 const botao = document.querySelector(".btn-cadastro");
 botao.addEventListener("click", function(){
-    window.location.href = "teste.html"
+    window.location.href = "cadastro.html"
 })
 
 const login = document.querySelector(".btn-entrar");
