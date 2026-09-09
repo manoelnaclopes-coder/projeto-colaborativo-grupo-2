@@ -1,10 +1,16 @@
-document.getElementById("txt-1").innerHTML = "mudei informação <b>eeeeeee</b>";  //inserir coisas no html pelo id
+const botao = document.querySelector(".btn-cadastro");
+botao.addEventListener("click", function(){
+    window.location.href = "teste.html"
+})
 
-//aqui cria um bloco que tudo que estiver dentro faz parte do botao cadastrar
-function eventoclick() {
-    if (document.body.style.backgroundColor === "black") {  //aqui ta colocando uma condição onde se estiver preto mude para o normal
-        document.body.style.setProperty("background-color", "#a6bcdb", "important");
-    } else { // aqui ta falando que seão for a condição de cima deixe preto
-        document.body.style.setProperty("background-color", "black", "important");
-    }
-}
+const login = document.querySelector(".btn-entrar");
+login.addEventListener("click", function(){
+    modal.style.display = "flex"
+})
+
+const modal = document.querySelector(".modal-login");
+
+const fechar = document.querySelector(".fechar");
+fechar.addEventListener("click", function(){
+    modal.style.display = "none"
+})
