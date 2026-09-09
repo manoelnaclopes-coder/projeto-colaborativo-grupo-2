@@ -270,3 +270,7 @@ footer{
     margin-top: 100px;
  
 }
+/* a onde vai aparecer o dispaly */
+.modal-login {
+    display: none;
+}
