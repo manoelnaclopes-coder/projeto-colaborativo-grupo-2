@@ -1,18 +1,22 @@
-document.getElementById("txt-1").innerHTML = "mudei informação <b>eeeeeee</b>";  //inserir coisas no html pelo id
+document.getElementById("txt-1").innerHTML = "mudei informação <b></b>";  //inserir coisas no html pelo id
 
-//aqui cria um bloco que tudo que estiver dentro faz parte do botao cadastrar
 function eventoclick() {
-    if (document.body.style.backgroundColor === "black") {  //aqui ta colocando uma condição onde se estiver preto mude para o normal
-        document.body.style.setProperty("background-color", "#a6bcdb", "important");
-    } else { // aqui ta falando que seão for a condição de cima deixe preto
-        document.body.style.setProperty("background-color", "black", "important");
+    if (document.body.style.backgroundColor == "dark") {
+        document.body.style.setProperty("white-mode", "#f2f2f2");
+    } else {
+        document.body.style.setProperty("dark-mode", "#000000");
     }
 }
 
-const botao = document.querySelector(".btn-cadastro");
-botao.addEventListener("click", function(){
-    window.location.href = "cadastro.html"
-})
+const cor = document.querySelector(".btn-cor");
+cor.addEventListener("click", function(){
+    document.body.classList.toggle("dark-mode");
+    if(document.body.classList.contains("dark-mode")){
+        cor.textContent = "dark mode";
+    }else{
+        cor.textContent = "modo claro";
+    }
+});
 
 const login = document.querySelector(".btn-entrar");
 login.addEventListener("click", function(){
