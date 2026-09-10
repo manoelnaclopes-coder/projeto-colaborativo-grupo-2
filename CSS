@@ -2,7 +2,23 @@ body {
     border: 0;
     padding: 0;
     margin: 0;
-    background-color: #c9dbf2 !important; /*o inportante serve para dizer que essa cor é prioridade pois o botstrap tem sua cor definida*/
+    background-color: var(--fundo) !important; /*o inportante serve para dizer que essa cor é prioridade pois o botstrap tem sua cor definida*/
+}
+
+:root{
+    --barras_btn: #22c55e;
+    --fundo: #c9dbf2;
+    --letras: #000000;
+    --pesquisa: #c0bebe;
+    --letra_B: #ffffff;
+}
+
+body.dark-mode{
+    --barras_btn: #22c55e;
+    --fundo: #000000;
+    --letras: #ffffff;
+    --pesquisa: #c0bebe;
+    --letra_B: #ffffff;
 }
 
 /*logo*/
@@ -20,6 +36,13 @@ body {
     gap: 10px;
 }
 
+.logo h2{
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 30px;
+    color: var(--letras);
+    font-weight: 700;  /*deixa o texto em negrito*/
+    line-height: 1.2;   /*diminui o espaço entre as linhas */
+}
 /* alinhar header e animar */
 
 
@@ -42,12 +65,12 @@ header ul {
 
 header a {
     text-decoration: none;  /* aqui tira a linha de baixo */
-    color: #000000;
+    color: var(--letras);
     transition: .43s;
 }
 
 header .navegacao a:hover {  /* aqui seleciona em especifico o navegacao a*/
-    background-color: rgba(0, 0, 0, 0.129);
+    background-color: var(--letras);
     border-radius: 30px;
     padding: 5px 10px;
 }
@@ -59,6 +82,16 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
 }
 
 /*estilizar o entrar*/
+.btn-cor button {
+    background-color: var(--barras_btn);
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
 
 
 .btn-entrar {
@@ -72,7 +105,7 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
 }
 
 .btn-entrar button {
-    background-color: #22c55e;
+    background-color: var(--barras_btn);
     border-radius: 10px;
     padding: 5px 20px;
     border: 0;
@@ -82,15 +115,17 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
     margin-right: 20px;
 }
 
+
+
 /*barra que separa o header*/
 header {
-    box-shadow: 1px  2px rgba(61, 154, 19, 0.756);  /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
+    box-shadow: 1px  2px var(--barras_btn);  /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
 }
 
 /* arrumar a barra de pesquisa */
 .pesquisa {
     display: flex;
-    background-color: #b8bbc0;
+    background-color: var(--pesquisa);
     border-radius: 20px;
     align-items: center;
     width: 300px;
@@ -105,17 +140,17 @@ header {
     outline: none;   /*tirou as linhas em volta da escrita*/
     width: 100%;   /*vai o culpar o espaço maximo*/
     font-size: 14px;
-    color: #1a1717;
+    color:var(--letras);
 }
 
 /*placeholder é para autera cor, fonte ou opacidade*/
 .pesquisa input::placeholder {
-    color: #46494c;
+    color: var(--pesquisa);
 }
 
 .pesquisa span {
     font-size: 20px;
-    color: #4d921c;
+    color:var(--barras_btn);
     font-weight: bold;  /*bold significa 700 deixa o span mais grosso*/
     cursor: pointer;
     margin-left: 5px;
@@ -130,7 +165,7 @@ main .topo {
 main .txt-topo h1 {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 48px;
-    color: #243b53;
+    color: var(--letras);
     font-weight: 700;  /*deixa o texto em negrito*/
     line-height: 1.2;   /*diminui o espaço entre as linhas */
     margin-bottom: 20px;  /*aqui ele afasta o paragrafo de baixo*/
@@ -143,14 +178,14 @@ main .txt-topo h1 {
 }
 
 .quebrar-linha span{
-    color: #35a853;
+    color: var(--barras_btn);
     font-style: italic;
 }
 
 main .txt-topo p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color:  #52606d;
+    color:  var(--letras);
     line-height: 1.4;   /*da espaço entre as linhas*/
     max-width: 450px;   /* limita o texto ficar muito comprido*/
     margin-bottom: 30px;  /*afasta o botão de baixo*/
@@ -179,12 +214,13 @@ main .txt-topo p {
 
 /*botão esplicando como funciona o site*/
 .bt-sobre button{
-    color: rgb(0, 0, 0);
-    background-color:none;
+    color: var(--letras);
+    background-color: var(--barras_btn);
     border-radius: 10px;
     height: 40px;
     width: 180px;
     margin-bottom: 100px;
+
 }
 
 .bt-sobre span{
@@ -192,7 +228,7 @@ main .txt-topo p {
 }
 /*aqui cria uma barra verde */
 section {
-    box-shadow: 1px  80px  rgba(59, 141, 21, 0.773);
+    box-shadow: 1px  80px  var(--barras_btn);  /*o (0) é que a sombra não vasa eo (2) é que a sombra vai 2px para baixo*/
 }
 /*informaçoes dentro da barra*/
 .barra{
@@ -202,7 +238,7 @@ section {
     margin-left: 100px;
     margin-top: 20px;
     margin-bottom: 1px;
-    color:  #ffffff;
+    color:  var(--letra_B);
     font-weight: 700;
 }
 /*Parte dos Materiais*/
@@ -210,6 +246,7 @@ section {
 .materias {
     padding: 20px 10px;
     margin-left: 50px; /* Alinha com o resto do seu layout */
+    color: var(--letras);
 }
 
 /* Agrupa os cards lado a lado usando Flexbox */
@@ -226,7 +263,7 @@ section {
 /* Estilo individual para cada card (card1 e card2) */
 .card1, .card2 {
     width: 300px;          /* Define uma largura fixa ideal para o card */
-    background-color: #ffffff;
+    background-color:var(--letra_B); /* Define a cor de fundo do card */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Deixa o card elevado e bonito */
     overflow: hidden;      /* Garante que a imagem respeite as bordas arredondadas */
@@ -250,8 +287,8 @@ section {
 }
 
 footer{
-    background-color: rgba(59, 141, 21, 0.756);
-    color: rgb(0, 0, 0);
+    background-color: var(--barras_btn);
+    color: var(--letras);
     padding: 30px;
     margin-top: 100px;
 
@@ -259,4 +296,15 @@ footer{
 /* a onde vai aparecer o dispaly */
 .modal-login {
     display: none;
+}
+
+.btn-cor .dark-mode {
+    background-color: var(--barras_btn);
+    color: var(--letras);
+    border-radius: 10px;
+    padding: 5px 20px;
+    border: 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
 }
