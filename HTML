@@ -14,7 +14,7 @@
         <div class="interface">
             <div class="logo">
                 <a href="#">
-                <img src="imagems/logo.png" alt="logo" width="50px" height="50px">
+                    <img src="imagems/logo.png" alt="logo" width="50px" height="50px">
                 </a>
                 <h2> <strong> StartInTech </strong></h2>
             </div>
@@ -27,15 +27,15 @@
             </nav>
             <div class="pesquisa"> <input type="text" placeholder="Pesquisar..."> <span>⌕</span> </div>
             <div class="botoes">
-                  <div class="btn-entrar">
+                <div class="btn-entrar">
                     <a href="#"><button>entrar</button></a>
                 </div>
 
                 <div class="btn-cor">
                     <a href="#"><button onclick="eventoclick()">cor</button></a>
                 </div>
-                </div>
             </div>
+        </div>
         </div>
     </header>
     <main>
@@ -64,7 +64,7 @@
             <p id="txt-4">informaçoes</p>
         </div>
         <div class="materias">
-        <h2><span>Materias</span></h2>
+            <h2><span>Materias</span></h2>
             <div class="card">
                 <div class="card1">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBfsihCjIV5Ok98Nq7kuvkzQdj0amGaw4zHjtUfkyKgg&s=10"
@@ -101,13 +101,25 @@
     </main>
     <div class="modal-login">
         <div class="entrar">
-            <h2>entrar</h2>
 
-            <input type="email" placeholder="seu email">
-            <input type="senha" placeholder="sua senha">
+            <form>
+                <h2>Entrar</h2>
 
-            <button>entrar</button>
-            <button class="fechar">fechar</button>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Senha</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                </div>
+                <div class="btn-login">
+                <button class="entrar">Entrar</button>
+                <button class="fechar">Fechar</button>
+                </div>
+            </form>
         </div>
     </div>
     <script src="js.js"></script>
