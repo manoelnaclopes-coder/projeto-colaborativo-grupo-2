@@ -12,6 +12,7 @@ body {
     --pesquisa: #c0bebe;
     --letra_B: #ffffff;
     --loguin: #c9dbf2;
+    --sombra: rgba(128, 128, 128, 0.224);
 }
 
 body.dark-mode{
@@ -71,7 +72,7 @@ header a {
 }
 
 header .navegacao a:hover {  /* aqui seleciona em especifico o navegacao a*/
-    background-color: var(--letras);
+    background-color: rgba(128, 128, 128, 0.224);
     border-radius: 30px;
     padding: 5px 10px;
 }
@@ -85,19 +86,21 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
 /*estilizar o entrar*/
 .btn-cor button {
     background-color: var(--barras_btn);
-    border-radius: 10px;
-    padding: 5px 20px;
+    color: var(--letras);
+    border-radius: 50%;
+    padding: 1px 2px;
     border: 0;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-
 }
 
+.btn-cor{
+    margin-right: 10px;
+}
 
 .btn-entrar {
     transition: .3s;
-
 }
 
 .btn-entrar:hover {  /*hover estiliza o botaõ quendo vc passa em cima*/
@@ -114,6 +117,10 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
     font-weight: 600;
     cursor: pointer;
     margin-right: 20px;
+    
+}
+.btn-entrar button{
+    color: var(--letras);
 }
 
 
@@ -306,17 +313,6 @@ footer{
     cursor: pointer;
 }
 
-.dark-mode button{
-    background-color: var(--barras_btn);
-    color: var(--letras);
-    border-radius: 10px;
-    padding: 5px 20px;
-    border: 0;
-    font-size: 18px;
-    font-weight: 600;
-    cursor: pointer;
-}
-
 .modal-login {
     display: none;
     position: fixed;
@@ -344,10 +340,15 @@ footer{
 }
 
 .btn-login button{
-    color: var(--letras);
-    background-color: var(--barras_btn);
+    color: black;
+    background-color: #22c55e;
     border-radius: 10px;
     height: 40px;
     width: 70px;
     gap: 100px;
+}
+
+.botoes{
+    display: flex;
+    
 }
