@@ -9,7 +9,7 @@ body {
     --barras_btn: #22c55e;
     --fundo: #c9dbf2;
     --letras: #000000;
-    --pesquisa: #c0bebe;
+    --pesquisa: #96dba8;
     --letra_B: #ffffff;
     --loguin: #c9dbf2;
     --sombra: rgba(128, 128, 128, 0.224);
@@ -17,9 +17,9 @@ body {
 
 body.dark-mode{
     --barras_btn: #22c55e;
-    --fundo: #000000;
+    --fundo: #213153;
     --letras: #ffffff;
-    --pesquisa: #c0bebe;
+    --pesquisa: #7caa88;
     --letra_B: white;
 }
 
@@ -93,11 +93,9 @@ header .botoes {  /* aqui estou selecionando botoes dentro do header*/
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-}
-
-.btn-cor{
     margin-right: 10px;
 }
+
 
 .btn-entrar {
     transition: .3s;
@@ -153,12 +151,12 @@ header {
 
 /*placeholder é para autera cor, fonte ou opacidade*/
 .pesquisa input::placeholder {
-    color: var(--pesquisa);
+    color: var(--letras);
 }
 
 .pesquisa span {
     font-size: 20px;
-    color:var(--barras_btn);
+    color:var(--letras);
     font-weight: bold;  /*bold significa 700 deixa o span mais grosso*/
     cursor: pointer;
     margin-left: 5px;
@@ -303,7 +301,7 @@ footer{
 /*nuda cor e formato do btn de cor */
 
 .btn-cor{
-    background-color: none;
+    background-color: transparent;
     color: var(--letras);
     border-radius: 10px;
     padding: 5px 20px;
