@@ -1,21 +1,23 @@
-document.getElementById("txt-1").innerHTML = "mudei informação <b></b>";  //inserir coisas no html pelo id
+const cor = document.querySelector(".btn-cor");
 
-function eventoclick() {
-    if (document.body.style.backgroundColor == "dark") {
-        document.body.style.setProperty("white-mode", "#f2f2f2");
-    } else {
-        document.body.style.setProperty("dark-mode", "#000000");
-    }
+// Quando a página abrir, verifica se o modo escuro estava ativado
+if (localStorage.getItem("modo") === "escuro") {
+    document.body.classList.add("dark-mode");
+    cor.querySelector("button").textContent = "🌒";
 }
 
-const cor = document.querySelector(".btn-cor");
-cor.addEventListener("click", function(){
+cor.addEventListener("click", function() {
+
     document.body.classList.toggle("dark-mode");
-    if(document.body.classList.contains("dark-mode")){
-        cor.textContent = "🌒";
-    }else{
-        cor.textContent = "☀️ ";
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("modo", "escuro");
+        cor.querySelector("button").textContent = "🌒";
+    } else {
+        localStorage.setItem("modo", "claro");
+        cor.querySelector("button").textContent = "☀️";
     }
+
 });
 
 const login = document.querySelector(".btn-entrar");
@@ -34,4 +36,3 @@ const fechar = document.querySelector(".fechar");
 fechar.addEventListener("click", function(){
     modal.style.display = "none"
 })
-
