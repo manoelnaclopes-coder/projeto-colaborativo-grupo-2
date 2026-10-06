@@ -36,3 +36,11 @@ const fechar = document.querySelector(".fechar");
 fechar.addEventListener("click", function(){
     modal.style.display = "none"
 })
+
+const img = document.getElementById("animaçao")
+img.addEventListener("click", function(){
+    const confete = document.createElement("div");
+    confete.classList.add("confete");
+    document.body.appendChild(confete);
+
+})
