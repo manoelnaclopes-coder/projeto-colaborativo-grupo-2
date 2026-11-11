@@ -44,3 +44,26 @@ img.addEventListener("click", function(){
     document.body.appendChild(confete);
 
 })
+
+
+const tec = document.getElementById("nome-logo");
+const nomecompleto = "StartInTech";
+let anime;
+tec.textContent = "S";
+
+tec.addEventListener("mouseenter", function() {
+    clearInterval(anime);
+    let letra = 1;
+
+    anime = setInterval(function() {
+        tec.textContent = nomecompleto.substring(0, letra);
+        letra++;
+        if (letra > nomecompleto.length) {
+            clearInterval(anime);
+        }
+    }, 150);
+});
+tec.addEventListener("mouseleave", function() {
+    clearInterval(anime);
+    tec.textContent = "S";
+});
