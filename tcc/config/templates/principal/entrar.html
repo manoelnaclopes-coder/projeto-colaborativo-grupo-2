@@ -1,0 +1,81 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'css/login.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <div class="logo">
+
+        <img src="{% static 'logo-original.png'%}" alt="logo" width="300px" height="150px">
+    </div>
+
+  
+    <h3 class="bem-vindo">Seja bem-vindo de volta!</h3>
+    <h4 class="descricao">Entre na sua conta para adquirir muito conhecimento</h4>
+
+
+        <button type="button" class="btn-cor">☀️</button>
+
+
+    <div class="login">
+
+        {% if messages %}
+            {% for message in messages %}
+
+                <div class="mensagem-erro">
+                    <div class="alert theme-danger" role="alert">
+                        <p>{{ message }}</p>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="form-field">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Escreva seu e-mail aqui">
+            </div>
+
+            <div class="form-field">
+                <label for="password1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password1" name="senha" placeholder="Escreva sua senha">
+            </div>
+
+                <button type="submit" class="btn-solid"><strong>Enviar</strong></button>
+               
+        <a href="{% url 'cadastro' %}"> <button type="button" class="btn-solid"><strong>Cadastrar</strong></button> </a>
+
+        </form>
+
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+     setTimeout(function()  {
+
+        const mensagem = document.querySelector(".mensagem-erro");
+
+        if(mensagem) {
+            mensagem.style.display = 'none';
+        }
+    
+    }, 4000);
+</script>
+
+<script src="{% static 'javascript/js.js' %}"></script>
+
+</html>

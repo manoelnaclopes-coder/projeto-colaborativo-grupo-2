@@ -1,0 +1,148 @@
+body {
+    background-color: var(--fundo) !important;
+    
+}
+
+.body{
+    position: relative;
+}
+body .logo{
+    margin-bottom: 20px;
+    text-align: center;
+}
+body .logo img{
+    width: auto;
+    height: auto;
+}
+button.btn-cor {
+    
+    border: none;
+    background: none;
+    position: absolute;
+    color: var(--letras);
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    top:20%;
+    right:30%;
+}
+:root{
+    --pesquisa: #7caa88;
+    --branco: white;
+    --letras:black;
+    --fundo: #c9dbf2;
+}
+
+body.dark-mode{
+    --branco: black;
+    --letras:white;
+    --fundo: #213153;
+}
+
+.form-control{
+    background-color: var(--branco);
+    color: var(--letras);
+}
+.form button{
+    background-color: var(--branco);
+    color: var(--letras);
+    display: flex;
+}
+body .login{
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--branco);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+.logo {
+    position: absolute;
+    margin-bottom: 200px;
+    top: 17%;
+    left: 42%;
+    height: 100px;
+    width: 200px;
+    
+
+}
+
+.texto {
+    color: green;
+    position: absolute;
+    top: 33%;
+    left: 45%;
+}
+
+.bem-vindo {
+    position: absolute;
+    left: 42%;
+    top: 38%;
+    color: var(--letras);
+}
+
+.bem-vindo-cadastro {
+    position: absolute;
+    left: 45%;
+    top: 38%;
+    color: var(--letras);
+}
+
+.descricao {
+    position: absolute;
+    left: 39%;
+    top: 43%;
+    color: var(--letras);
+
+}
+
+.login {
+    position: absolute;
+    top: 52%;
+    left: 38.5%;
+    width: 500px;
+    color: var(--branco);
+}
+
+.form-field{
+    background-color: var(--branco);
+}
+
+.form-label{
+    color: var(--letras);
+}
+
+.btn-solid {
+    margin-top: 20px;
+    transition: .3s;
+    color: var(--letras);
+    background-color: green;
+    
+}
+
+.btn-solid:hover {
+    transform: scale(1.2);
+}
+
+.btn-cor {
+    background-color: transparent;
+    position: absolute;
+    color: var(--letras);
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    top:20%;
+    right:30%;
+}
+
+.btn-cor {
+    transition: .3s;
+}
+
+.btn-cor:hover {
+    transform: scale(1.2);
+}
+

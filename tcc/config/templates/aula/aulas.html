@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css">
+    <title>startintech</title>
+</head>
+
+<body>
+    <header>
+        <div class="interface">
+            <div class="logo">
+                
+                    <img src="{% static 'logo-original.png'%}" alt="logo" width="120px" height="70px">
+            
+                <h2> <strong> StartInTech </strong></h2>
+            </div>
+            <nav class="navegacao">
+                <ul>
+                    <li><a href="{% url 'inicio' %}"><strong>INICIO</strong></a></li>
+                    <li><a href="{% url 'aulas' %}"><strong>AULAS</strong></a></li>
+                    <li><a href="{% url 'progresso' %}"><strong>MEU PERFIL</strong></a></li>
+                </ul>
+            </nav>
+            <div class="pesquisa"> <input type="text" placeholder="Pesquisar..."> <span>⌕</span> </div>
+            <div class="botoes">
+                <div class="btn-cor">
+                    <button>☀️</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+
+       <div class="aula"><h1>Aulas</h1></div>
+
+        <div class="materias-aula">
+
+            <div class="card-aula">
+
+               <a href="{% url 'pc' %}" class="link-card"> <div class="card1-aula">
+                    <img src="{% static 'computador.png' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">Conhecendo o Computador</h5>
+                        <p class="card-text-aula">Aprenderá como funciona o computador.</p>
+                    </div>
+                </div> </a>
+
+               <a href="{% url 'logica' %}" class="link-card"> <div class="card2-aula">
+                    <img src="{% static 'programar.png' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">Lógica de programação</h5>
+                        <p class="card-text-aula">Aprenderá como funciona a programação.</p>
+                    </div>
+                </div> </a>
+
+                <a href="{% url 'hacker' %}" class="link-card"> <div class="card3-aula">
+                    <img src="{% static 'hacker.png' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">Hacker ético</h5>
+                        <p class="card-text-aula">Aprenderá como funciona a segurança em sistemas</p>
+                    </div>
+                </div> </a>
+
+               <a href="{% url 'python' %}" class="link-card"> <div class="card4-aula">
+                    <img src="{% static 'Python.jpg' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">Python</h5>
+                        <p class="card-text-aula">A linguagem mais fácil e prática para iniciantes</p>
+                    </div>
+                </div> </a>
+
+               <a href="{% url 'front' %}" class="link-card"> <div class="card5-aula">
+                    <img src="{% static 'html-css.png' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">HTML e CSS</h5>
+                        <p class="card-text-aula">Principais linguagens para construir a interface do site</p>
+                    </div>
+                </div></a>
+
+               <a href="{% url 'ia' %}" class="link-card"> <div class="card5-aula">
+                    <img src="{% static 'ia.jpg' %}" class="card-img-top2" alt="imagem aleatória">
+
+                    <div class="card-body-aula">
+                        <h5 class="card-title-aula">Inteligência Artificial</h5>
+                        <p class="card-text-aula">Aprenderá como funciona uma IA</p>
+                    </div>
+                </div> </a> 
+
+            </div>
+        </div>
+
+    </main>
+
+
+
+    <script src="{% static 'javascript/js.js' %}"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+
+
+<!--{% for materia in materias %}
+    <div class="card">
+        Imagem do topo do cartão 
+        <div class="card-image">
+            <img src="{% static 'programar.png' %}" alt="{{ materia.nome }}" height="100px" width="100px">
+        </div>
+
+        <div class="card-body">
+            <h3>{{ materia.nome }}</h3>
+            <p>{{ materia.descricao }}</p>
+            <a href="#" class="btn-card">Clique Aqui</a>
+        </div>
+    </div>
+    {% endfor %} -->
